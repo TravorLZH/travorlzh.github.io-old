@@ -1,9 +1,17 @@
+---
+title: <%= page.index.title %>
+devmsg: <%= page.dev.sitemsg %>
+authormail: <%=page.author.mail%>
+authorgithub: <%=page.author.github%>
+---
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Travor's Site</title>
+		<title>{{title}}</title>
 	</head>
 	<body>
-		<h1>This site is still in development</h1>
+		<h1>{{devmsg}}</h1>
+		<p>This site is going to show more about my repos in <a href="{{authorgithub}}">Github</a></p>
+		<p>You can contact me via mailing <a href="mail:{{authormail}}">{{authormail}}</a></p>
 	</body>
 </html>

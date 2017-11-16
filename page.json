@@ -1,0 +1,13 @@
+{
+	"author":{
+		"mail":"travor_lzh@outlook.com"
+		"github":"https://github.com/TravorLZH"
+	}
+	"index":{
+		"title":"Travor's Site"
+	}
+	"dev":{
+		"sitemsg":"This site is still in development",
+		"pagemsg":"This page is still in development"
+	}
+}
