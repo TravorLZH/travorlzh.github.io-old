@@ -1,12 +1,13 @@
 {
 	"author":{
-		"mail":"travor_lzh@outlook.com"
+		"mail":"travor_lzh@outlook.com",
 		"github":"https://github.com/TravorLZH"
-	}
+	},
 	"index":{
 		"title":"Travor's Site"
-	}
+	},
 	"dev":{
-		"sitemsg":"This site is still in development"
+		"sitemsg":"This site is still in development",
+		"partmsg":"This part is still in development"
 	}
 }
