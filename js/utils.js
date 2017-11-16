@@ -1,6 +1,6 @@
 function init404(){
-	document.getElementById("msg").innerText="The requested URL "+getCurrentUrl()+" was not found on this server.";
+	document.getElementById("msg").innerText="The requested URL "+getCurrentPath()+" was not found on this server.";
 }
-function getCurrentUrl(){
-	return window.location.toString();
+function getCurrentPath(){
+	return window.location.href;
 }
