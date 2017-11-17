@@ -1,6 +1,6 @@
 ---
-title: <%= page.index.title %>
-devmsg: <%= page.dev.sitemsg %>
+title: 
+devmsg: This site is still in development
 authormail: <%=page.author.mail%>
 authorgithub: <%=page.author.github%>
 ---
@@ -10,11 +10,11 @@ authorgithub: <%=page.author.github%>
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>{{page.index.title}}</title>
+		<title>{{title}}</title>
 	</head>
 	<body>
-		<h1>{{page.dev.sitemsg}}</h1>
-		<p>This site is going to show more about my repos in <a href="{{page.author.github}}">Github</a></p>
-		<p>You can contact me via mailing <a href="mail:{{page.author.mail}}">{{authormail}}</a></p>
+		<h1>{{devemsg}}</h1>
+		<p>This site is going to show more about my repos in <a href="{{authorgithub}}">Github</a></p>
+		<p>You can contact me via mailing <a href="mail:{{authormail}}">{{authormail}}</a></p>
 	</body>
 </html>
