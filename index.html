@@ -1,17 +1,10 @@
----
-title: 
-devmsg: This site is still in development
-authormail: <%=page.author.mail%>
-authorgithub: <%=page.author.github%>
----
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>{{title}}</title>
+		<title>TravorLZH - Home</title>
+		<script src="assets/js/utils.js"></script>
 	</head>
-	<body>
-		<h1>{{devmsg}}</h1>
-		<p>This site is going to show more about my repos in <a href="{{authorgithub}}">Github</a></p>
-		<p>You can contact me via mailing <a href="mail:{{authormail}}">{{authormail}}</a></p>
+	<body onload="index.init()">
+		<h1></h1>
 	</body>
 </html>
