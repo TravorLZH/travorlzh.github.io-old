@@ -1,6 +1,7 @@
 var global={
 	init:function(module){
 		document.title="TravorLZH - "+module.title;
+		module.init();
 	}
 };
 var p404={
