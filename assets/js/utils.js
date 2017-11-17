@@ -1,6 +1,6 @@
 var global={
-	init:function(){
-		document.title="TravorLZH - {{title}}"
+	init:function(module){
+		document.title="TravorLZH - "+module.title;
 	}
 };
 var p404={
@@ -9,6 +9,7 @@ var p404={
 	}
 };
 var index={
+	title:"Home",
 	init:function(){
 		console.info("Welcome");
 	}
