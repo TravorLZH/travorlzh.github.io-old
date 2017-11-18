@@ -1,21 +1,42 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+}
 h1,h2,h3,h4,h5,h6 {
 	font-family: Tahoma;
 	font-weight: bold;
 }
-.vertical{
-	width: 1px;
-	height: 100%;
+.row:after{
+	height: 100px;
+	content:"";
+	display: table;
+	clear: both;
 }
-.leftside{
+.siderleft{
 	width: 30%;
 	float:left;
-	background-color: red;
+	background-color: #fffdb7;
+	height: 100%;
+}
+.content{
+	width: 40%;
+	float:left;
+	height: 100%;
+}
+.siderright{
+	width: 30%;
+	float: right;
+	height: 100%;
 }
 .header {
 	text-align: center;
 }
 .footer {
 	font-size: 12px;
+	float: bottom;
+	width: 100%;
 	text-align: center;
 }
 .navbar{

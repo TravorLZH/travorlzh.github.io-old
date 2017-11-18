@@ -26,10 +26,20 @@
 			var nav=document.getElementsByClassName("navbar");
 			nav[0].children[{{page.nav}}].id="active";
 		</script>
-		<div class="leftside">Hello</div>
-		<div class="content">
-			<h2>{{page.mtitle}}</h2>
-			{{ content }}
+		<div class="row">
+			<div class="siderleft">
+				<form name="searchfrm">
+					<input type="text" name="s" placeholder="Search..."/>
+					<input type="submit" value="Go"/>
+				</form>
+			</div>
+			<div class="content">
+				<h2>{{page.mtitle}}</h2>
+				{{ content }}
+			</div>
+			<div class="siderright">
+				<p>Hello</p>
+			</div>
 		</div>
 		<hr/>
 		<div class="footer">
