@@ -11,7 +11,7 @@
 				var len=nav.length;
 				for(var i=0;i<len;i++){
 					if(i==n){
-						nav[i].setAttribute("id","active");
+						nav[i].id="active";
 					}
 				}
 			}
@@ -22,9 +22,9 @@
 			<h1>TravorLZH</h1>
 		</div>
 		<div id="nav" class="navbar">
-			<a href="#">Home</a>
-			<a href="#">Projects</a>
-			<a href="#" pos="right">About</a>
+			<a href="#" id="">Home</a>
+			<a href="#" id="">Projects</a>
+			<a href="#" id="" pos="right">About</a>
 		</div>
 		<div class="content">
 			<h2>{{page=xx}}</h2>
