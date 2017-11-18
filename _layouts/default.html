@@ -10,21 +10,21 @@
 				var nav=document.getElementById(n);
 				var len=nav.length;
 				for(var i=0;i<len;i++){
-					if(nav[i].id==n){
-						nav.setAttribute("active","true");
+					if(i==n){
+						nav[i].setAttribute("id","active");
 					}
 				}
 			}
 		</script>
 	</head>
-	<body onload="activate('{{page.nav}}')">
+	<body onload="activate({{page.nav}})">
 		<div class="header">
 			<h1>TravorLZH</h1>
 		</div>
 		<div id="nav" class="navbar">
-			<a href="#" id="0">Home</a>
-			<a href="#" id="1">Projects</a>
-			<a href="#" id="2" pos="right">About</a>
+			<a href="#">Home</a>
+			<a href="#">Projects</a>
+			<a href="#" pos="right">About</a>
 		</div>
 		<div class="content">
 			<h2>{{page=xx}}</h2>
