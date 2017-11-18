@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="icon" href="/assets/icons/favicon.ico"/>
-		<link rel="shortcut icon" href="/assets/icons/favicon.ico"/>
-		<link rel="stylesheet" href="/assets/css/styles.css"/>
-		<title></title>
-		<script src="/assets/js/utils.js"></script>
+		<title>TravorLZH - {{page.title}}</title>
+		<link rel="icon" href="../assets/icons/favicon.ico"/>
+		<link rel="shortcut icon" href="../assets/icons/favicon.ico"/>
+		<link rel="stylesheet" href="../assets/css/styles.css"/>
+		<script type="text/javascript">
+			function activate(n){
+				var nav=document.getElementById(n).item(0);
+				var len=nav.length;
+				for(var i=0;i<len;i++){
+					if(nav.item(i).id==n){
+						nav.setAttribute("active","true");
+					}
+				}
+			}
+		</script>
 	</head>
-	{{ content }}
-	<hr/>
-	<div class="bottom">
-		<p>Contact Travor &#060;<a href="mail:travor_lzh@outlook.com">travor_lzh@outlook.com</a>&#062;</p>
-		<p><a href="https://github.com/TravorLZH">Github</a></p>
-		<p><a href="https://twitter.com/Travor_LZH">Twitter</a></p>
-	</div>
+	<body onload="activate('{{page.nav}}')">
+		<div class="header">
+			<h1>TravorLZH</h1>
+		</div>
+		<div id="nav" class="navbar">
+			<a href="#" id="0">Home</a>
+			<a href="#" id="1">Projects</a>
+			<a href="#" id="2" pos="right">About</a>
+		</div>
+		<div class="content">
+			<h2 id="h2_title">Welcome to Travor's github site</h1>
+			{{ content }}
+		</div>
+		<hr/>
+		<div class="footer">
+			<p>Contact Travor &#060;<a href="mail:travor_lzh@outlook.com">travor_lzh@outlook.com</a>&#062;</p>
+			<p><a href="https://github.com/TravorLZH">Github</a></p>
+			<p><a href="https://twitter.com/Travor_LZH">Twitter</a></p>
+		</div>
+	</body>
 </html>
