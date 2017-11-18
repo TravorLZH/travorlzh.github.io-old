@@ -6,18 +6,11 @@
 		<link rel="shortcut icon" href="../assets/icons/favicon.ico"/>
 		<link rel="stylesheet" href="../assets/css/styles.css"/>
 		<script type="text/javascript">
-			function activate(n){
-				var nav=document.getElementsByClassName("navbar")[0].children;
-				var len=nav.length;
-				for(var i=0;i<len;i++){
-					if(i==n){
-						nav[i].id="active";
-					}
-				}
-			}
+			var nav=document.getElementsByClassName("navbar")[0].children;
+			nav.item({{page.nav}}).id="active";
 		</script>
 	</head>
-	<body onload="activate({{page.nav}})">
+	<body>
 		<div class="header">
 			<h1>TravorLZH</h1>
 		</div>
