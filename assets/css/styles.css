@@ -2,6 +2,15 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: Tahoma;
 	font-weight: bold;
 }
+.vertical{
+	width: 1px;
+	height: 100%;
+}
+.leftside{
+	width: 30%;
+	float:left;
+	background-color: red;
+}
 .header {
 	text-align: center;
 }
@@ -11,7 +20,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 .navbar{
 	overflow: hidden;
-	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	background-color: #434647;
@@ -29,8 +37,33 @@ h1,h2,h3,h4,h5,h6 {
 	padding: 14px 16px;
 	background-color: #434647;
 }
-.navbar a[pos='right']{
+.dropdown-content{
+	position: absolute;
+	display:none;
+	overflow: hidden;
+	text-decoration: none;
+	color: white;
+	right: 8px;
+	padding-top: 14px;
+	z-index: 1;
+}
+.dropdown-content a{
+	display: block;
+	width: 100px;
+	text-align: center;
+	padding: 14px 16px;
+}
+.dropdown{
+	display: inline-block;
 	float: right;
+	font-size: 18px;
+	color: white;
+	padding: 14px 16px;
+	background-color: #434647;
+}
+.dropdown:hover .dropdown-content{
+	float: right;
+	display:block;
 }
 .navbar a:hover:not(#active){
 	background-color: black;
