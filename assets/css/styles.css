@@ -16,7 +16,7 @@ h1,h2,h3,h4,h5,h6 {
 	padding: 0;
 	background-color: #434647;
 }
-#active{
+.navbar a[active='true']{
 	background-color: #7c7c7c;
 	color: white;
 }
@@ -32,7 +32,7 @@ h1,h2,h3,h4,h5,h6 {
 .navbar a[pos='right']{
 	float: right;
 }
-.navbar a:hover:not(#active){
+.navbar a:hover:not([active='true']]){
 	background-color: black;
 	color: white;
 }

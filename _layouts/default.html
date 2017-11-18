@@ -7,10 +7,10 @@
 		<link rel="stylesheet" href="../assets/css/styles.css"/>
 		<script type="text/javascript">
 			function activate(n){
-				var nav=document.getElementById(n).item(0);
+				var nav=document.getElementById(n)[0];
 				var len=nav.length;
 				for(var i=0;i<len;i++){
-					if(nav.item(i).id==n){
+					if(nav[0].id==n){
 						nav.setAttribute("active","true");
 					}
 				}
