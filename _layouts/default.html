@@ -5,18 +5,30 @@
 		<link rel="icon" href="../assets/icons/favicon.ico"/>
 		<link rel="shortcut icon" href="../assets/icons/favicon.ico"/>
 		<link rel="stylesheet" href="../assets/css/styles.css"/>
+		<script type="text/javascript">
+			function drop(){
+				console.log("Clicked");
+				var dropdown=document.getElementsByClassName("dropdown-content")[0];
+				if(dropdown.getAttribute("show")=="false"){
+					dropdown.setAttribute("show","true");
+				}else if(dropdown.getAttribute("show")=="true"){
+					dropdown.setAttribute("show","false");
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<div class="header">
 			<h1>TravorLZH</h1>
+			<p>A young website</p>
 		</div>
 		<div id="nav" class="navbar">
 			<a href="#" id="">Home</a>
 			<a href="#" id="">Projects</a>
 			<a href="#" id="">Documentations</a>
 			<div class="dropdown">
-				About
-				<div class="dropdown-content">
+				<button class="dropbtn" onclick="drop()">About</button>
+				<div class="dropdown-content" show="false">
 					<a href="#" id="">Contact</a><br/>
 					<a href="#" id="">Github Site</a><br/>
 				</div>
@@ -24,22 +36,11 @@
 		</div>
 		<script type="text/javascript">
 			var nav=document.getElementsByClassName("navbar");
-			nav[0].children[{{page.nav}}].id="active";
+			//nav[0].children[{{page.nav}}].id="active";
 		</script>
-		<div class="row">
-			<div class="siderleft">
-				<form name="searchfrm">
-					<input type="text" name="s" placeholder="Search..."/>
-					<input type="submit" value="Go"/>
-				</form>
-			</div>
-			<div class="content">
-				<h2>{{page.mtitle}}</h2>
-				{{ content }}
-			</div>
-			<div class="siderright">
-				<p>Hello</p>
-			</div>
+		<div class="content">
+			<h2>{{page.mtitle}}</h2>
+			{{ content }}
 		</div>
 		<hr/>
 		<div class="footer">
