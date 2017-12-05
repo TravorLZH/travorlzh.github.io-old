@@ -29,7 +29,7 @@
 			<div class="dropdown">
 				<button class="dropbtn" onclick="drop()">About</button>
 				<div class="dropdown-content" show="false">
-					<a href="#" id="">Contact</a><br/>
+					<a href="#footer" id="">Contact</a><br/>
 					<a href="#" id="">Github Site</a><br/>
 				</div>
 			</div>
@@ -43,10 +43,12 @@
 			{{ content }}
 		</div>
 		<hr/>
-		<div class="footer">
-			<p>Contact Travor &#060;<a href="mail:travor_lzh@outlook.com">travor_lzh@outlook.com</a>&#062;</p>
-			<p><a href="https://github.com/TravorLZH">Github</a></p>
-			<p><a href="https://twitter.com/Travor_LZH">Twitter</a></p>
-		</div>
+		<base href="footer">
+			<div class="footer">
+				<p>Contact Travor &#060;<a href="mailto:travor_lzh@outlook.com">travor_lzh@outlook.com</a>&#062;</p>
+				<p><a href="https://github.com/TravorLZH">Github</a></p>
+				<p><a href="https://twitter.com/Travor_LZH">Twitter</a></p>
+			</div>
+		</base>
 	</body>
 </html>
