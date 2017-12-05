@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TravorLZH - Projects</title>
+		<link rel="icon" href="../assets/icons/favicon.ico"/>
+		<link rel="shortcut icon" href="../assets/icons/favicon.ico"/>
+		<link rel="stylesheet" href="../assets/css/styles.css"/>
+		<script type="text/javascript">
+			function drop(){
+				console.log("Clicked");
+				var dropdown=document.getElementsByClassName("dropdown-content")[0];
+				if(dropdown.getAttribute("show")=="false"){
+					dropdown.setAttribute("show","true");
+				}else if(dropdown.getAttribute("show")=="true"){
+					dropdown.setAttribute("show","false");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<h1>Travor Liu</h1>
+			<p>One of the new developers</p>
+		</div>
+		<div id="nav" class="navbar">
+			<a href="/home.html" id="">Home</a>
+			<a href="/projects.html" id="">Projects</a>
+			<a href="/documentations.html" id="">Documentations</a>
+			<div class="dropdown">
+				<button class="dropbtn" onclick="drop()">About</button>
+				<div class="dropdown-content" show="false">
+					<a href="#footer" id="">Contact</a><br/>
+					<a href="https://github.com/TravorLZH/travorlzh.github.io" id="">Github Source</a><br/>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var nav=document.getElementsByClassName("navbar");
+			nav[0].children[1].id="active";
+		</script>
+		<div class="content">
+			<h2>Travor's Projects</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ex justo, bibendum fringilla feugiat eget, feugiat vitae arcu. Praesent efficitur consectetur luctus. Etiam mattis lacinia ligula, non sagittis ligula consectetur id. Quisque vitae justo varius, fringilla diam vitae, molestie purus. Etiam mollis euismod dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis justo diam, elementum a diam quis, tempus porttitor elit. Curabitur a vestibulum nulla, et bibendum ex. Ut tortor ipsum, tristique non nunc non, tincidunt vulputate lorem. Fusce nec ligula et eros lacinia congue eget ac dui. Nullam convallis, nulla eget tempor ornare, purus est finibus leo, id tincidunt eros mauris at nulla. Sed eu viverra massa, fermentum vestibulum libero. Quisque accumsan nibh ut elementum pulvinar. Nulla justo justo, accumsan ut pellentesque eget, pretium eget dui. Donec efficitur sollicitudin quam et vulputate. Mauris hendrerit nibh elit, ac posuere ligula dapibus eget.</p>
+		</div>
+		<hr/>
+		<span id="footer">
+			<div class="footer">
+				<p>Contact Travor &#060;<a href="mailto:travor_lzh@outlook.com">travor_lzh@outlook.com</a>&#062;</p>
+				<p><a href="https://github.com/TravorLZH">Github</a></p>
+				<p><a href="https://twitter.com/Travor_LZH">Twitter</a></p>
+			</div>
+		</span>
+	</body>
+</html>
