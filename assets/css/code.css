@@ -1,0 +1,14 @@
+.code{
+	width: 50%;
+	overflow: scroll;
+	background-color:#f6f8ff;
+	border: 1px;
+	padding: 4px;
+	border-color: black;
+}
+h3 a{
+	text-decoration: none;
+}
+.code * {
+	font-family: Consolas;
+}
