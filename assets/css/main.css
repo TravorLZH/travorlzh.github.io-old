@@ -1,8 +1,13 @@
+iframe {
+	border: 0px;
+}
 .sidebar{
 	width: 25%;
 	float: left;
+	min-height: 100px;
 }
 .content{
 	width: 75%;
+	min-height: 100px;
 	float: left;
 }
