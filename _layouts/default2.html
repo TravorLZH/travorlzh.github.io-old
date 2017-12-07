@@ -1,7 +1,10 @@
+---
+lines: 285
+---
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>TravorLZH - {{page.title}}</title>
+		<title>Travor Liu - {{page.title}}</title>
 		<link rel="icon" href="../assets/icons/favicon.ico"/>
 		<link rel="shortcut icon" href="/assets/icons/favicon.ico"/>
 		<link rel="stylesheet" href="/assets/css/styles.css"/>
@@ -20,13 +23,13 @@
 	</head>
 	<body>
 		<div class="header">
-			<h1>Travor Liu</h1>
-			<p>One of the new developers</p>
+			<h1>Travor Liu's Pages</h1>
+			<p>Less CSS More HTML</p>
 		</div>
 		<div id="nav" class="navbar">
 			<a href="/home.html" id="">HOME</a>
 			<a href="/projects.html" id="">PROJECTS</a>
-			<a href="/testing.html" id="">TESTING</a>
+			<a href="/demos.html" id="">DEMOS</a>
 			<div class="dropdown">
 				<button class="dropbtn" onclick="drop()">ABOUT</button>
 				<div class="dropdown-content" show="false">
@@ -42,7 +45,7 @@
 		<table style="width: 100%;">
 			<tr>
 				<td class="sidebar">
-					<iframe src="/assets/frames/sidebar.html">
+					<iframe src="/assets/frames/sidebar.html" width="90%" height="500px">
 						<p>Your browser doesn't support iframe</p>
 					</iframe>
 				</td>
@@ -60,6 +63,7 @@
 							<p><a href="https://github.com/TravorLZH">Github</a></p>
 							<p><a href="https://twitter.com/Travor_LZH">Twitter</a></p>
 							<p>Proudly appreciate <a href="http://w3schools.com/">W3Schools</a></p>
+							<p>This whole site contains {{page.lines}} lines of code</p>
 						</div>
 					</span>
 				</td>
