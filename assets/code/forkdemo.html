@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<html>
+<head>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<title>Exported from Notepad++</title>
+<style type="text/css">
+span {
+	font-family: 'Consolas';
+	font-size: 10pt;
+	color: #F8F8F8;
+}
+.sc0 {
+}
+.sc4 {
+	color: #CF6A4C;
+}
+.sc5 {
+	color: #F9EE98;
+}
+.sc6 {
+	color: #8F9D6A;
+}
+.sc9 {
+	color: #8996A8;
+}
+.sc10 {
+	color: #CDA869;
+}
+.sc11 {
+}
+.sc16 {
+	color: #CDA869;
+}
+</style>
+</head>
+<body>
+<div style="float: left; white-space: pre; line-height: 1; background: #141414; "><span class="sc9">#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+</span><span class="sc0">
+</span><span class="sc16">int</span><span class="sc0"> </span><span class="sc11">main</span><span class="sc10">(</span><span class="sc16">void</span><span class="sc10">){</span><span class="sc0">
+    </span><span class="sc11">pid_t</span><span class="sc0"> </span><span class="sc11">pid</span><span class="sc10">=</span><span class="sc11">fork</span><span class="sc10">();</span><span class="sc0">
+    </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">pid</span><span class="sc10">==</span><span class="sc4">0</span><span class="sc10">){</span><span class="sc0">
+        </span><span class="sc11">printf</span><span class="sc10">(</span><span class="sc6">"I am the child procss!\n"</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc5">else</span><span class="sc0"> </span><span class="sc5">if</span><span class="sc10">(</span><span class="sc11">pid</span><span class="sc10">&gt;</span><span class="sc4">0</span><span class="sc10">){</span><span class="sc0">
+        </span><span class="sc11">printf</span><span class="sc10">(</span><span class="sc6">"I am the parent process, the child pid is %d\n"</span><span class="sc10">,</span><span class="sc11">pid</span><span class="sc10">);</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc5">else</span><span class="sc10">{</span><span class="sc0">
+        </span><span class="sc11">perror</span><span class="sc10">(</span><span class="sc6">"ERROR"</span><span class="sc10">);</span><span class="sc0">
+        </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc10">-</span><span class="sc4">1</span><span class="sc10">;</span><span class="sc0">
+    </span><span class="sc10">}</span><span class="sc0">
+    </span><span class="sc5">return</span><span class="sc0"> </span><span class="sc4">0</span><span class="sc10">;</span><span class="sc0">
+</span><span class="sc10">}</span><span class="sc0">
+</span></div></body>
+</html>

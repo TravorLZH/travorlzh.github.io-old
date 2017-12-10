@@ -1,5 +1,5 @@
 ---
-lines: 285
+lines: more than 300
 ---
 <!DOCTYPE html>
 <html>
@@ -10,6 +10,7 @@ lines: 285
 		<link rel="stylesheet" href="/assets/css/styles.css"/>
 		<link rel="stylesheet" href="/assets/css/main.css"/>
 		<link rel="stylesheet" href="/assets/css/code.css"/>
+		<script src="/assets/js/iframeadapter.js"></script>
 		<script type="text/javascript">
 			function drop(){
 				var dropdown=document.getElementsByClassName("dropdown-content")[0];
@@ -21,7 +22,7 @@ lines: 285
 			}
 		</script>
 	</head>
-	<body>
+	<body onload="initFrames()">
 		<div class="header">
 			<h1>Travor Liu's Pages</h1>
 			<p>Less CSS More HTML</p>
@@ -45,7 +46,7 @@ lines: 285
 		<table style="width: 100%;">
 			<tr>
 				<td class="sidebar">
-					<iframe src="/assets/frames/sidebar.html" width="90%" height="500px">
+					<iframe src="/assets/frames/sidebar.html" width="80%" height="500px">
 						<p>Your browser doesn't support iframe</p>
 					</iframe>
 				</td>

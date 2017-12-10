@@ -6,23 +6,8 @@ mtitle: Travor's Projects
 ---
 <h3><a href="https://github.com/TravorLZH/libwinfork">libwinfork: implementation of fork on Windows</a></h3>
 This is the first program I wrote with fork();<br/><br/>
-<div class="code">
-<pre style='color:#000020;background:#f6f8ff;'>
-<span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdio.h</span><span style='color:#800000; '>></span>
-<span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>unistd.h</span><span style='color:#800000; '>></span>
-<span style='color:#200080; font-weight:bold; '>int</span> <span style='color:#400000; '>main</span><span style='color:#308080; '>(</span><span style='color:#200080; font-weight:bold; '>void</span><span style='color:#308080; '>)</span><span style='color:#406080; '>{</span>
-&#32;&#32;&#32;&#32;pid_t pid<span style='color:#308080; '>=</span>fork<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
-&#32;&#32;&#32;&#32;<span style='color:#200080; font-weight:bold; '>if</span><span style='color:#308080; '>(</span>pid<span style='color:#308080; '>=</span><span style='color:#308080; '>=</span><span style='color:#008c00; '>0</span><span style='color:#308080; '>)</span><span style='color:#406080; '>{</span>
-&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<span style='color:#003060; '>printf</span><span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>I am the child procss!</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
-&#32;&#32;&#32;&#32;<span style='color:#406080; '>}</span><span style='color:#200080; font-weight:bold; '>else</span> <span style='color:#200080; font-weight:bold; '>if</span><span style='color:#308080; '>(</span>pid<span style='color:#308080; '>></span><span style='color:#008c00; '>0</span><span style='color:#308080; '>)</span><span style='color:#406080; '>{</span>
-&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<span style='color:#003060; '>printf</span><span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>I am the parent process, the child pid is </span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#308080; '>,</span>pid<span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
-&#32;&#32;&#32;&#32;<span style='color:#406080; '>}</span><span style='color:#200080; font-weight:bold; '>else</span><span style='color:#406080; '>{</span>
-&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<span style='color:#003060; '>perror</span><span style='color:#308080; '>(</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>ERROR</span><span style='color:#800000; '>"</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
-&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<span style='color:#200080; font-weight:bold; '>return</span> <span style='color:#308080; '>-</span><span style='color:#008c00; '>1</span><span style='color:#406080; '>;</span>
-&#32;&#32;&#32;&#32;<span style='color:#406080; '>}</span>
-&#32;&#32;&#32;&#32;<span style='color:#200080; font-weight:bold; '>return</span> <span style='color:#008c00; '>0</span><span style='color:#406080; '>;</span>
-<span style='color:#406080; '>}</span>
-</pre>
-</div>
+<iframe class="code" src="/assets/code/forkdemo.html">
+<p>Your browser does not support iframe</p>
+</iframe>
 <br/>
 As you can see, this program may only work on UN*X systems and Windows with MSYS or CYGWIN, but my library will implement this function on Windows environment. This will allow most linux source code to be built and run properly on Windows.
