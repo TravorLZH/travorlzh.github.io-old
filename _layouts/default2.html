@@ -9,7 +9,8 @@ lines: 285
 		<link rel="shortcut icon" href="/assets/icons/favicon.ico"/>
 		<link rel="stylesheet" href="/assets/css/styles.css"/>
 		<link rel="stylesheet" href="/assets/css/main.css"/>
-		<link rel="stylesheet" href="/assets/css/code.css"/>
+		<link rel="stylesheet" href="/assets/css/custom.css"/>
+		<link rel="stylesheet" href="/assets/css/darcula.css"/>
 		<script type="text/javascript">
 			function drop(){
 				var dropdown=document.getElementsByClassName("dropdown-content")[0];
@@ -51,7 +52,9 @@ lines: 285
 				</td>
 				<td class="content">
 					<h2>{{page.mtitle}}</h2>
-					{{ content }}
+					<pre>
+						{{ content }}
+					</pre>
 				</td>
 			<tr>
 			<tr>
@@ -69,5 +72,7 @@ lines: 285
 				</td>
 			</tr>
 		</table>
+		<script src="/assets/js/highlight.pack.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
 	</body>
 </html>
