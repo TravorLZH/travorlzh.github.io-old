@@ -5,9 +5,34 @@ nav: 1
 mtitle: Travor's Projects
 ---
 <h3><a href="https://github.com/TravorLZH/libwinfork">libwinfork: implementation of fork on Windows</a></h3>
+<<<<<<< HEAD
 This is the first program I wrote with fork();<br/><br/>
 <iframe class="code" src="/assets/code/forkdemo.html">
 <p>Your browser does not support iframe</p>
 </iframe>
+=======
+This is the first program I wrote with fork();
+<br/>
+<pre>
+<code class="cpp">
+#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+
+int main(void){
+    pid_t pid=fork();
+    if(pid==0){
+        printf("I am the child procss!\n");
+    }else if(pid>0){
+        printf("I am the parent process, the child pid is %d\n",pid);
+    }else{
+        perror("ERROR");
+        return -1;
+    }
+    return 0;
+}
+
+</code>
+</pre>
+>>>>>>> testing
 <br/>
 As you can see, this program may only work on UN*X systems and Windows with MSYS or CYGWIN, but my library will implement this function on Windows environment. This will allow most linux source code to be built and run properly on Windows.

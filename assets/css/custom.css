@@ -1,0 +1,10 @@
+pre {
+	font-family: Arial;
+}
+code {
+	padding: 10px;
+	width: 400px;
+	overflow: scroll;
+	font-family: Consolas;
+	display: block;
+}
