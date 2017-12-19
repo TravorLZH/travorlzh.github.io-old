@@ -43,7 +43,7 @@ But I am not capable of using the standard C library in this kernel because my o
 ; Ensures that we jump straight into the kernel's entry function.
 [bits	32]
 [extern	main]	; Declare that we will be referencing
-				;the external symbol 'main'
+		;the external symbol 'main'
 call	main
 jmp	$
 </code></pre>
