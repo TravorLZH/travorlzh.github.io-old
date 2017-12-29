@@ -1,10 +1,10 @@
 ---
 title: Projects
-layout: default2
+layout: modern
 nav: 1
 mtitle: Travor's Projects
 ---
-<h3><a href="https://github.com/TravorLZH/TravorOS">TravorOS: Developing with simplification</a></h3>
+<h3><a href="https://github.com/TravorLZH/OS">TravorOS: Developing with simplification</a></h3>
 This is the first operating system I created<br/>
 <pre><code class="x86asm">
 	mov	ax,0x7C0; Set the data segment from
@@ -48,28 +48,4 @@ call	main
 jmp	$
 </code></pre>
 <h3><a href="https://github.com/TravorLZH/LearnOS">OS Tutorial</a></h3>
-This repo is a mirror of my work in study of Operating System. You may build those code by 'make' or using 'nasm -fbin foo.asm -o bar.bin'. I hope these codes would help more people learn Operating System. I also put the document 'os-dev.pdf' that I learned OS from in the root directory.
-<!--
-<h3><a href="https://github.com/TravorLZH/libwinfork">libwinfork: implementation of fork on Windows</a></h3>
-This is the first program I wrote with fork();
-<br/>
-<pre><code class="cpp">
-#include &lt;stdio.h&gt;
-#include &lt;unistd.h&gt;
-
-int main(void){
-    pid_t pid=fork();
-    if(pid==0){
-        printf("I am the child procss!\n");
-    }else if(pid>0){
-        printf("I am the parent process, the child pid is %d\n",pid);
-    }else{
-        perror("ERROR");
-        return -1;
-    }
-    return 0;
-}
-
-</code></pre>
-As you can see, this program may only work on UN*X systems and Windows with MSYS or CYGWIN, but my library will implement this function on Windows environment. This will allow most linux source code to be built and run properly on Windows.
--->
+This repo is a mirror of my work in study of Operating System. You may build those code by <i>make</i> or using <i>nasm -fbin foo.asm -o bar.bin</i> I hope the code would help more people in learning of Operating System. I also put the document <i>os-dev.pdf</i> that I learned OS from in the root directory.

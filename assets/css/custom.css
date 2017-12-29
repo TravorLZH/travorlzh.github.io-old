@@ -1,10 +1,16 @@
-pre {
-	font-family: Arial;
+i{
+	display: inline-block;
+	font-style: normal;
+	font-family: Consolas;
+	padding: 2px 4px;
+	background-color: #F8F8F8;
 }
 code {
+	box-shadow: 5px 5px 10px grey;
+	text-align: left;
 	padding: 10px;
-	width: 400px;
-	overflow: scroll;
+	max-width: 600px;
+	overflow-x: scroll;
 	font-family: Consolas;
 	display: block;
 }
