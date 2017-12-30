@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Responsive Layout</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				font-family: Arial;
+			}
+			h1,h2,h3,h4,h5,h6{
+				font-family: Tahoma;
+			}
+			body{
+				margin: 0px;
+			}
+			.header{
+				display: block;
+				margin: 0px;
+				padding: 1px;
+				background-color: lightgreen;
+				text-align: center;
+			}
+			.menu {
+				width: 25%;
+				float: left;
+				padding: 15px;
+			}
+			.menu ul{
+				padding: 0px;
+				list-style-type: none;
+			}
+			.menu a{
+				display: block;
+				text-align: center;
+				background-color: #F3F3F3;
+				margin: 10px 0px;
+				overflow: hidden;
+				padding: 10px;
+				text-decoration: none;
+				color: black;
+				box-shadow: 2px 2px 5px gray;
+			}
+			.menu a:hover{
+				background-color: gray;
+				cursor: pointer;
+				color: white;
+			}
+			.row::after{
+				content: "";
+				clear: both;
+				display: table;
+			}
+			.main {
+				width: 75%;
+				float: left;
+				padding: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="row">
+			<div class="header">
+				<h1>Responsive Layout Demonstration</h1>
+			</div>
+			<div class="menu">
+				<h3>Websites</h3>
+				<a href="http://www.google.com">Google</a>
+				<a href="http://www.pinterest.com">Pinterest</a>
+				<a href="http://www.facebook.com">Facebook</a>
+				<a href="http://www.twitter.com">Twitter</a>
+			</div>
+			<div class="main">
+				<h2>Title</h2>
+				<p>Content content content content content content content content content content content content</p>
+				<p>Content content content content content content content content content content content</p>
+			</div>
+		</div>
+	</body>
+</html>
