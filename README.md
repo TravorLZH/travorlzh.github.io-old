@@ -8,4 +8,4 @@ This is my first successful repository about CSS because I really worked a lot o
 
 - `PROJECTS`: All repo I created and at least 1 code board for each.
 
-- `DEMOS`: I would like to put my tutorial there. I hope this helps other learn to code.
+- `LABS`: I would like to put my in-testing html pages. I'm currently working on Responsive Layout.
