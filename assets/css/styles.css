@@ -12,21 +12,6 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: bold;
 	text-align: left;
 }
-.header h1{
-	text-align: center;
-}
-.header {
-	top: 0px;
-	text-shadow: 1px 1px 2px grey;
-	text-align: center;
-	background-color: #F3F3F3;
-	height: 120px;
-}
-.footer {
-	font-size: 12px;
-	width: 100%;
-	text-align: center;
-}
 .navbar{
 	overflow: hidden;
 	margin: 0;
@@ -39,7 +24,7 @@ h1,h2,h3,h4,h5,h6 {
 	background-color: green;
 	color: white;
 }
-.navbar a,.dropdown{
+.navbar a{
 	float: left;
 	display: block;
 	font-size: 18px;
@@ -48,36 +33,6 @@ h1,h2,h3,h4,h5,h6 {
 	color: white;
 	padding: 14px 16px;
 	background-color: #434647;
-}
-.dropdown-content{
-	position: fixed;
-	display: none;
-	float: right;
-	margin-top: 50px;
-	overflow: hidden;
-	min-width: 160px;
-	text-decoration: none;
-	color: white;
-	right: 0;
-	z-index: 1;
-}
-.dropdown{
-	float:right;
-}
-.dropdown-content a{
-	display: block;
-	width: 200px;
-	text-align: center;
-	padding: 14px 16px;
-}
-.dropdown:hover{
-	background-color: black;
-	color: white;
-}
-.dropdown:hover .dropdown-content{
-	position: absolute;
-	margin-top: 50px;
-	display: block;
 }
 .navbar a:hover:not(#active){
 	background-color: black;
