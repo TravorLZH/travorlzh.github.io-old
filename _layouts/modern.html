@@ -10,30 +10,44 @@
 		<link rel="stylesheet" href="/assets/css/custom.css"/>
 		<link rel="stylesheet" href="/assets/highlight/github.css"/>
 		<script type="text/javascript">
-			function ldusr(a){
-				a.innerText=navigator.userAgent;
+			function getHeight(elemnt){
+				return Math.max(elemnt.offsetHeight,elemnt.scrollHeight,elemnt.clientHeight);
+			}
+			function handleScroll(){
+				var header=document.getElementById("header");
+				var navbar=document.getElementById("nav");
+				var doc=document.documentElement;
+				if(doc.scrollTop>=getHeight(header)){
+					navbar.style.position="fixed";
+					navbar.style.top="0";
+					navbar.style.opacity="0.5";
+				}else{
+					navbar.style.position="static";
+					navbar.style.opacity=1.0;
+				}
 			}
 		</script>
 	</head>
-	<body>
-		<div class="header stay">
+	<body onscroll="handleScroll()">
+		<div id="header" class="header">
 			<h1>Travor Liu's Pages</h1>
 			<p>Less CSS More HTML</p>
 		</div>
-		<div id="nav" class="navbar stay">
+		<div id="nav" class="navbar">
+			<a href="javascript:void(0)"
 			<a href="/home.html" id="">HOME</a>
 			<a href="/projects.html" id="">PROJECTS</a>
 			<a href="/labs.html" id="">LABS</a>
 		</div>
 		<script type="text/javascript">
 			var nav=document.getElementsByClassName("navbar");
-			nav[0].children[{{page.nav}}].id="active";
+			nav[0].children[{{page.nav}}+1].id="active";
 		</script>
 		<div class="t-body">
 			<div class="content">
 				<h2>{{page.mtitle}}</h2>
 				{{ content }}
-				<br/><br/><br/><br/><br/><br/>
+				<br/><br/><br/><br/><br/><br/><hr/>
 				<span id="footer">
 					<div class="footer">
 						<p>Contact Travor &#060;<a href="mailto:travor_lzh@outlook.com">travor_lzh@outlook.com</a>&#062;</p>
