@@ -15,6 +15,7 @@ h1,h2,h3,h4,h5,h6 {
 .navbar{
 	overflow: hidden;
 	margin: 0;
+	z-index: 1;
 	width: 100%;
 	padding: 0;
 	background-color: #434647;
@@ -23,7 +24,7 @@ h1,h2,h3,h4,h5,h6 {
 	background-color: green;
 	color: white;
 }
-.navbar a{
+.nav-btn{
 	float: left;
 	display: block;
 	font-size: 18px;
@@ -33,7 +34,57 @@ h1,h2,h3,h4,h5,h6 {
 	padding: 14px 16px;
 	background-color: #434647;
 }
+.nav-menu{
+	font-size: 150%;
+	padding: 8px 12px;
+}
 .navbar a:hover:not(#active){
 	background-color: black;
 	color: white;
+}
+#sidemenu{
+	display: block;
+	padding-top: 62px;
+	opacity: 0.9;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	color: white;
+	transition: 0.5s;
+	float: left;
+	width: 0px;
+	overflow-x: hidden;
+	height: 100%;
+	background-color: black;
+}
+#sidemenu .tit{
+	position: absolute;
+	left: 10px;
+	top: 0px;
+	white-space: pre;
+	display: block;
+}
+#sidemenu a{
+	overflow-x: hidden;
+	font-size: larger;
+	display: block;
+	color: white;
+	background-color: black;
+	padding: 10px 15px;
+}
+#sidemenu .closebtn{
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 36px;
+	margin-left: 50px;
+}
+#sidemenu #m-active{
+	color: white;
+	background-color: green;
+}
+#sidemenu a:hover{
+	color: black;
+	background-color: white;
 }

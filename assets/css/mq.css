@@ -1,0 +1,16 @@
+/* Styles for both devices */
+.hidden{
+	display: none;
+}
+/* Styles on desktop devices */
+@media only screen and (min-width: 420px) {
+	.hide-on-large{
+		display: none;
+	}
+}
+/* Styles on mobile devices */
+@media only screen and (max-width: 420px) {
+	.hide-on-small{
+		display: none;
+	}
+}

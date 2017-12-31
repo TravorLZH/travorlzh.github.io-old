@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="/assets/css/styles.css"/>
 		<link rel="stylesheet" href="/assets/css/main.css"/>
 		<link rel="stylesheet" href="/assets/css/custom.css"/>
+		<link rel="stylesheet" href="/assets/css/mq.css"/>
 		<link rel="stylesheet" href="/assets/highlight/github.css"/>
 		<script type="text/javascript">
 			function getHeight(elemnt){
@@ -16,15 +17,25 @@
 			function handleScroll(){
 				var header=document.getElementById("header");
 				var navbar=document.getElementById("nav");
+				var bd=document.getElementById("main");
 				var doc=document.documentElement;
 				if(doc.scrollTop>=getHeight(header)){
 					navbar.style.position="fixed";
 					navbar.style.top="0";
-					navbar.style.opacity="0.5";
+					bd.style["margin-top"]="70px";
 				}else{
 					navbar.style.position="static";
-					navbar.style.opacity=1.0;
+					bd.style["margin-top"]="20px";
 				}
+			}
+			function menu_close(){
+				var menu=document.getElementById("sidemenu");
+				menu.style.width="0px";
+			}
+			function menu_open(){
+				var menu=document.getElementById("sidemenu");
+				menu.style.width="62%";
+				menu.focus();
 			}
 		</script>
 	</head>
@@ -34,16 +45,26 @@
 			<p>Less CSS More HTML</p>
 		</div>
 		<div id="nav" class="navbar">
-			<a href="javascript:void(0)" style="display: none;">Nothing</a>
-			<a href="/home.html">HOME</a>
-			<a href="/projects.html">PROJECTS</a>
-			<a href="/labs.html">LABS</a>
+			<a class="nav-btn nav-menu hide-on-large" href="javascript:void(0)" onclick="menu_open()">&#9776;</a>
+			<a class="nav-btn hide-on-small" href="/home.html">HOME</a>
+			<a class="nav-btn hide-on-small" href="/projects.html">PROJECTS</a>
+			<a class="nav-btn hide-on-small" href="/labs.html">LABS</a>
+			<a class="nav-btn nav-menu hide-on-large" style="float: right;" href="/home.html">&#127968;</a>
+		</div>
+		<div id="sidemenu" class="hide-on-large">
+			<h2 class="tit">Travor Liu</h2>
+			<a href="javascript:void(0)" class="closebtn" onclick="menu_close()">&times;</a>
+			<a href="/home.html" onclick="menu_close()">HOME</a>
+			<a href="/projects.html" onclick="menu_close()">PROJECTS</a>
+			<a href="/labs.html" onclick="menu_close()">LABS</a>
 		</div>
 		<script type="text/javascript">
 			var nav=document.getElementsByClassName("navbar");
 			nav[0].children[{{page.nav}}+1].id="active";
+			var menu=document.getElementById("sidemenu");
+			menu.children[{{page.nav}}+2].id="m-active";
 		</script>
-		<div class="t-body">
+		<div id="main" class="t-body">
 			<div class="content">
 				<h2>{{page.mtitle}}</h2>
 				{{ content }}
