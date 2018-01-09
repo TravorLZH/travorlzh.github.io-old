@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Snack Bar</title>
+		<script type="text/javascript">
+			function showSnack(){
+				var sn=document.getElementById("snackbar");
+				sn.className="show";
+				setTimeout(function(){
+					sn.className=sn.className.replace("show","");
+				},3000);
+			}
+		</script>
+	</head>
+	<style>
+		@keyframes fadein{
+			from {bottom: 0; opacity: 0;}
+			to {bottom: 30px;opacity: 1;}
+		}
+		@keyframes fadeout{
+			from {bottom: 30px; opacity: 1;}
+			to {bottom: 0; opacity: 0}
+		}
+		button{
+			display: block;
+			padding: 10px;
+			background-color: #EEEEEE;
+			color: black;
+			border: none;
+		}
+		button:hover{
+			background-color: #CCCCCC;
+		}
+		button:focus{
+			outline: none;
+		}
+		button:active{
+			background-color: #AAAAAA;
+		}
+		#snackbar{
+			visibility: hidden;
+			position: fixed;
+			z-index: 2;
+			bottom: 30px;
+			background-color: black;
+			color: white;
+			font-size: 20px;
+			text-align: center;
+			padding: 10px;
+			left: 50%;
+			width: 250px;
+			margin-left: -125px;
+		}
+		#snackbar.show{
+			visibility: visible;
+			animation: fadein 0.5s,fadeout 0.5s 2.5s;
+		}
+	</style>
+	<body>
+		<h1>Snack Bar Demonstration</h1>
+		<p>Click the following button to display snack bar</p>
+		<button onclick="showSnack()">Show Snack Bar</button>
+		<div id="snackbar">Hello world</div>
+	</body>
+</html>

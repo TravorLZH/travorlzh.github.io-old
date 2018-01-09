@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Animation Demo</title>
+	</head>
+	<style>
+		@keyframes colors{
+			0%	{background-color: red;}
+			28%	{background-color: yellow;}
+			42% {background-color: green;}
+			84% {background-color: blue}
+		}
+		@keyframes stretch{
+			0%	{width: 100px;height: 100px;}
+			25%	{width: 200px;}
+			50%	{height: 200px;}
+			75%	{width: 100px;}
+			100%	{height: 100px;}
+		}
+		.rainbow{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			margin: 10px;
+			animation-name: colors;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+		}
+		.stretching{
+			margin: 10px;
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			animation: colors 2s linear infinite, stretch 5s linear infinite;
+		}
+	</style>
+	<body>
+		<h1>Animation Demo</h1>
+		<p>See the following squares</p>
+		<div class="rainbow"></div>
+		<div class="stretching"></div>
+	</body>
+</html>
