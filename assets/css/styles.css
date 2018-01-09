@@ -15,7 +15,6 @@ h1,h2,h3,h4,h5,h6 {
 .navbar{
 	overflow: hidden;
 	margin: 0;
-	z-index: 1;
 	width: 100%;
 	padding: 0;
 	background-color: #434647;
@@ -41,6 +40,14 @@ h1,h2,h3,h4,h5,h6 {
 .navbar a:hover:not(#active){
 	background-color: black;
 	color: white;
+}
+.sticky{
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.sticky + #main{
+	/* padding-top: 50px; */
 }
 #sidemenu{
 	display: block;

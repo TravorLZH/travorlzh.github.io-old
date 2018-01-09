@@ -14,20 +14,6 @@
 			function getHeight(elemnt){
 				return Math.max(elemnt.offsetHeight,elemnt.scrollHeight,elemnt.clientHeight);
 			}
-			function handleScroll(){
-				var header=document.getElementById("header");
-				var navbar=document.getElementById("nav");
-				var bd=document.getElementById("main");
-				var doc=document.documentElement;
-				if(doc.scrollTop>=getHeight(header)){
-					navbar.style.position="fixed";
-					navbar.style.top="0";
-					bd.style["margin-top"]="70px";
-				}else{
-					navbar.style.position="static";
-					bd.style["margin-top"]="20px";
-				}
-			}
 			function menu_close(){
 				var menu=document.getElementById("sidemenu");
 				menu.style.width="0px";
@@ -39,17 +25,10 @@
 			}
 		</script>
 	</head>
-	<body onscroll="handleScroll()">
+	<body>
 		<div id="header" class="header">
 			<h1>Travor Liu's Pages</h1>
 			<p>Less CSS More HTML</p>
-		</div>
-		<div id="nav" class="navbar">
-			<a class="nav-btn nav-menu hide-on-large" href="javascript:void(0)" onclick="menu_open()">&#9776;</a>
-			<a class="nav-btn hide-on-small" href="/home.html">HOME</a>
-			<a class="nav-btn hide-on-small" href="/projects.html">PROJECTS</a>
-			<a class="nav-btn hide-on-small" href="/labs.html">LABS</a>
-			<a class="nav-btn nav-menu hide-on-large" style="float: right;" href="/home.html">&#127968;</a>
 		</div>
 		<div id="sidemenu" class="hide-on-large">
 			<h2 class="tit">Travor Liu</h2>
@@ -58,18 +37,18 @@
 			<a href="/projects.html" onclick="menu_close()">PROJECTS</a>
 			<a href="/labs.html" onclick="menu_close()">LABS</a>
 		</div>
-		<script type="text/javascript">
-			var nav=document.getElementsByClassName("navbar");
-			nav[0].children[{{page.nav}}+1].id="active";
-			var menu=document.getElementById("sidemenu");
-			menu.children[{{page.nav}}+2].id="m-active";
-		</script>
+		<div id="nav" class="navbar">
+			<a class="nav-btn hide-on-large" href="javascript:void(0)" onclick="menu_open()">MENU</a>
+			<a class="nav-btn hide-on-small" href="/home.html">HOME</a>
+			<a class="nav-btn hide-on-small" href="/projects.html">PROJECTS</a>
+			<a class="nav-btn hide-on-small" href="/labs.html">LABS</a>
+			<a class="nav-btn nav-menu hide-on-large" style="float: right;" href="/home.html">&#127968;</a>
+		</div>
 		<div id="main" class="t-body">
 			<div class="content">
 				<h2>{{page.mtitle}}</h2>
 				{{ content }}
 				<br/><br/><br/><br/><br/><br/><hr/>
-				<!--email_off-->
 				<span id="footer">
 					<div class="footer">
 						<p>Contact Travor &#060;<a href="mailto:travor_lzh@outlook.com">travor_lzh@outlook.com</a>&#062;</p>
@@ -81,10 +60,24 @@
 						</ul>
 					</div>
 				</span>
-				<!--/email_off-->
 			</div>
 		</div>
 		<script src="/assets/js/highlight.pack.js"></script>
-		<script>hljs.initHighlightingOnLoad();</script>
+		<script>
+			var navbar=document.getElementById("nav");
+			navbar.children[{{page.nav}}+1].id="active";
+			var menu=document.getElementById("sidemenu");
+			menu.children[{{page.nav}}+2].id="m-active";
+			hljs.initHighlightingOnLoad();
+			window.onscroll=function(){handleScroll();};
+			var sticky=navbar.offsetTop;
+			function handleScroll(){
+				if(window.pageYOffset >= sticky){
+					navbar.classList.add("sticky");
+				}else{
+					navbar.classList.remove("sticky");
+				}
+			};
+		</script>
 	</body>
 </html>
