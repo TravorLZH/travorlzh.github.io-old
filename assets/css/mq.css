@@ -13,4 +13,13 @@
 	.hide-on-small{
 		display: none;
 	}
+	.sticky-on-small{
+		position: fixed;
+	}
+	.navbar{
+		top: 0;
+	}
+	.content{
+		margin-top: 50px;
+	}
 }

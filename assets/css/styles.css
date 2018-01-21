@@ -51,8 +51,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 #sidemenu{
 	display: block;
-	padding-top: 62px;
-	opacity: 0.9;
+/*	padding-top: 62px;
+	opacity: 0.9;*/
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -65,14 +65,19 @@ h1,h2,h3,h4,h5,h6 {
 	height: 100%;
 	background-color: black;
 }
-#sidemenu .tit{
+#sidemenu .closebtn{
 	position: absolute;
-	left: 10px;
-	top: 0px;
-	white-space: pre;
-	display: block;
+	top: 0;
+	width: 41px;
+	height: 41px;
+	text-align: center;
+	right: 0;
+	color: black;
+	background-color: #E0E0E0;
+	font-size: 36px;
+	margin-left: 50px;
 }
-#sidemenu a{
+#sidenav a{
 	overflow-x: hidden;
 	font-size: larger;
 	display: block;
@@ -80,18 +85,30 @@ h1,h2,h3,h4,h5,h6 {
 	background-color: black;
 	padding: 10px 15px;
 }
-#sidemenu .closebtn{
-	position: absolute;
-	top: 0;
-	right: 0;
-	font-size: 36px;
-	margin-left: 50px;
-}
-#sidemenu #m-active{
+#sidenav #m-active{
 	color: white;
 	background-color: green;
 }
-#sidemenu a:hover{
+#sidenav a:active{
 	color: black;
 	background-color: white;
+}
+#user-profile{
+	background-color: #E0E0E0;
+	color: black;
+	padding: 10px 1px 1px;
+	width: 100%;
+	text-align: center;
+}
+#user-profile .tit{
+	white-space: pre;
+	display: block;
+	text-align: center;
+}
+.circle{
+	border-radius: 50%;
+}
+.center{
+	position: absolute;
+	left: 50%;
 }

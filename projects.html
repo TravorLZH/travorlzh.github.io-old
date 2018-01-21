@@ -4,48 +4,5 @@ layout: modern
 nav: 1
 mtitle: Travor's Projects
 ---
-<h3><a href="https://github.com/TravorLZH/OS">TravorOS: Developing with simplification</a></h3>
-This is the first operating system I created<br/>
-<pre><code class="x86asm">
-	mov	ax,0x7C0; Set the data segment from
-	mov	ds,ax	; where we start
-	mov	bx,msg
-	call	print_string	; Call the print string
-				; routine we created
-	jmp	$		; Hang...
-	msg	db	"Hello world!",0
-
-print_string:
-	mov	ah,0x0E	; BIOS print char function
-.repeat:
-	mov	al,[bx]	; load character from string
-	inc	bx		; Increment the address
-	cmp	al,0	; Check if the character is valid
-	je	.done	; If yes, end of string
-	jmp	.repeat	; If not, get the next one
-.done:
-	ret
-
-	times	510-($-$$)	db	0
-	dw	0xAA55	; Standard boot sector signature
-</code></pre>
-It inherits the kerneltest32 section of <a href="https://github.com/TravorLZH/LearnOS">OS Tutorial</a>. This will be continuously developed. I finally decided to use 32-bit protected mode to boot this OS, because it allows me to write kernel in C like this:<br/>
-<pre><code class="cpp">
-#include &lt;basic.h&gt;
-
-int main(void){
-	puts("Hello world!");
-}
-
-</code></pre>
-But I am not capable of using the standard C library in this kernel because my operating system doesn't implement those code. Even the entry of the kernel is written by myself!<br/>
-<pre><code class="x86asm">
-; Ensures that we jump straight into the kernel's entry function.
-[bits	32]
-[extern	main]	; Declare that we will be referencing
-		;the external symbol 'main'
-call	main
-jmp	$
-</code></pre>
 <h3><a href="https://github.com/TravorLZH/LearnOS">OS Tutorial</a></h3>
-This repo is a mirror of my work in study of Operating System. You may build those code by <i>make</i> or using <i>nasm -fbin foo.asm -o bar.bin</i> I hope the code would help more people in learning of Operating System. I also put the document <i>os-dev.pdf</i> that I learned OS from in the root directory.
+This repo is a mirror of my work in study of Operating System. You may build those code by <b>make</b> or using <b>nasm -fbin foo.asm -o bar.bin</b> I hope the code would help more people in learning of Operating System. I also put the document <b>os-dev.pdf</b> that I learned OS from in the root directory.

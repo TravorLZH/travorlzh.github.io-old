@@ -9,7 +9,9 @@
 		<link rel="stylesheet" href="/assets/css/main.css"/>
 		<link rel="stylesheet" href="/assets/css/custom.css"/>
 		<link rel="stylesheet" href="/assets/css/mq.css"/>
+		<!-- External Stuff -->
 		<link rel="stylesheet" href="/assets/highlight/github.css"/>
+		<link rel="stylesheet" href="/font-awesome/css/font-awesome.css"/>
 		<script type="text/javascript">
 			function getHeight(elemnt){
 				return Math.max(elemnt.offsetHeight,elemnt.scrollHeight,elemnt.clientHeight);
@@ -26,23 +28,28 @@
 		</script>
 	</head>
 	<body>
-		<div id="header" class="header">
+		<div id="header" class="header hide-on-small">
 			<h1>Travor Liu's Pages</h1>
 			<p>Less CSS More HTML</p>
 		</div>
 		<div id="sidemenu" class="hide-on-large">
-			<h2 class="tit">Travor Liu</h2>
 			<a href="javascript:void(0)" class="closebtn" onclick="menu_close()">&times;</a>
-			<a href="/home.html" onclick="menu_close()">HOME</a>
-			<a href="/projects.html" onclick="menu_close()">PROJECTS</a>
-			<a href="/labs.html" onclick="menu_close()">LABS</a>
+			<div id="user-profile">
+				<a href="https://github.com/TravorLZH" id="avatar"><img class="circle" width="80" height="80" src="https://avatars.githubusercontent.com/TravorLZH"/></a>
+				<h2 class="tit">Travor Liu</h2>
+			</div>
+			<div id="sidenav">
+				<a href="/home.html" onclick="menu_close()">HOME</a>
+				<a href="/projects.html" onclick="menu_close()">PROJECTS</a>
+				<a href="/labs.html" onclick="menu_close()">LABS</a>
+			</div>
 		</div>
-		<div id="nav" class="navbar">
-			<a class="nav-btn hide-on-large" href="javascript:void(0)" onclick="menu_open()">MENU</a>
-			<a class="nav-btn hide-on-small" href="/home.html">HOME</a>
+		<div id="nav" class="navbar sticky-on-small">
+			<a class="nav-btn hide-on-large" href="javascript:void(0)" onclick="menu_open()"><i class="fa fa-bars"></i>&nbsp;Travor Liu</a>
+			<a class="nav-btn hide-on-small" href="/home.html">POSTS</a>
 			<a class="nav-btn hide-on-small" href="/projects.html">PROJECTS</a>
 			<a class="nav-btn hide-on-small" href="/labs.html">LABS</a>
-			<a class="nav-btn nav-menu hide-on-large" style="float: right;" href="/home.html">&#127968;</a>
+			<a class="nav-btn nav-menu hide-on-large" style="float: right;" href="/home.html"><i class="fa fa-home"></i></a>
 		</div>
 		<div id="main" class="t-body">
 			<div class="content">
@@ -66,18 +73,9 @@
 		<script>
 			var navbar=document.getElementById("nav");
 			navbar.children[{{page.nav}}+1].id="active";
-			var menu=document.getElementById("sidemenu");
-			menu.children[{{page.nav}}+2].id="m-active";
+			var menu=document.getElementById("sidenav");
+			menu.children[{{page.nav}}].id="m-active";
 			hljs.initHighlightingOnLoad();
-			window.onscroll=function(){handleScroll();};
-			var sticky=navbar.offsetTop;
-			function handleScroll(){
-				if(window.pageYOffset >= sticky){
-					navbar.classList.add("sticky");
-				}else{
-					navbar.classList.remove("sticky");
-				}
-			};
 		</script>
 	</body>
 </html>

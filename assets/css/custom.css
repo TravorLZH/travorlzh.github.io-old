@@ -1,10 +1,12 @@
-i{
+b{
 	display: inline-block;
 	font-style: normal;
 	font-family: Consolas;
 	font-size: small;
-	padding: 2px 4px;
-	background-color: #F8F8F8;
+	padding: 4px 8px;
+	border-radius: 5px;
+	font-weight: normal;
+	background-color: #F0F0F0;
 }
 code {
 	box-shadow: 5px 5px 10px grey;
