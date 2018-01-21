@@ -8,12 +8,3 @@ b{
 	font-weight: normal;
 	background-color: #F0F0F0;
 }
-code {
-	box-shadow: 5px 5px 10px grey;
-	text-align: left;
-	padding: 10px;
-	max-width: 600px;
-	overflow-x: scroll;
-	font-family: Consolas;
-	display: block;
-}
