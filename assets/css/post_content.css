@@ -27,7 +27,11 @@
   }
 
   #post code {
-    border: 1px solid #ddd;
+	/* Modification */
+/*    border: 1px solid #ddd;*/
+	border: none;
+	box-shadow: 2px 2px 5px gray;
+	/* End Modification */
     background-color: #eef;
     font-size: 85%;
     padding: 0 .2em;*/
