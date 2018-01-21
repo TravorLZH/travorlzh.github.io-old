@@ -25,6 +25,18 @@
 				menu.style.width="62%";
 				menu.focus();
 			}
+			var topx,x
+			window.onscroll=function(){
+				topx=document.documentElement.scrollTop;
+				x=document.getElementById("sidebar");
+				if(topx>=170){
+					x.style.top="0px";
+					//console.log("true");
+				}else{
+					x.style.top=(170-topx)+"px";
+					//console.log("false");
+				}
+			}
 		</script>
 	</head>
 	<body>
@@ -50,6 +62,13 @@
 			<a class="nav-btn hide-on-small" href="/projects.html">PROJECTS</a>
 			<a class="nav-btn hide-on-small" href="/labs.html">LABS</a>
 			<a class="nav-btn nav-menu hide-on-large" style="float: right;" href="/home.html"><i class="fa fa-home"></i></a>
+		</div>
+		<div id="sidebar" class="sidebar">
+			<img class="circle" style="position: absolute; left: 50%; margin-left: -40px; top: 30px;" width="80" height="80" src="https://avatars.githubusercontent.com/TravorLZH"/>
+			<h1>Travor Liu</h1>
+			<div id="bar-content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
 		</div>
 		<div id="main" class="t-body">
 			<div class="content">
