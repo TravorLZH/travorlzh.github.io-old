@@ -1,4 +1,4 @@
-b{
+.content code{
 	display: inline-block;
 	font-style: normal;
 	font-family: Consolas;
@@ -7,4 +7,28 @@ b{
 	border-radius: 5px;
 	font-weight: normal;
 	background-color: #F0F0F0;
+}
+
+.content pre code{
+	font-size: 15px;
+	box-shadow: 2px 2px 5px gray;
+	overflow-x: scroll;
+	width: 100%;
+}
+
+.content blockquote{
+	margin: 0;
+	background-color: #F0F0F0;
+	border-left: 10px solid #AAAAAA;
+	color: #888888;
+	font-family: Consolas;
+	padding: 1px 10px;
+}
+
+.content blockquote p{
+	margin: 8px 0px;
+}
+
+.content img{
+	width: 100%;
 }
