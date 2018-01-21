@@ -1,2 +1,5 @@
 markdown: kramdown
 pygments: true
+kramedown:
+  input: GFM
+  hard_wrap: false
