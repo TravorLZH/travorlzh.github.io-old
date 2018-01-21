@@ -18,6 +18,7 @@
 /*    padding: 0 .4em;*/
 	padding: 10px;
 	font-size: 20px;
+	box-shadow: 2px 2px 5px gray;
 	/* End Modification */
   }
 
@@ -30,7 +31,6 @@
 	/* Modification */
 /*    border: 1px solid #ddd;*/
 	border: none;
-	box-shadow: 2px 2px 5px gray;
 	/* End Modification */
     background-color: #eef;
     font-size: 85%;
