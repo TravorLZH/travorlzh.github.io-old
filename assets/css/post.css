@@ -1,0 +1,22 @@
+.article{
+	display: block;
+	background-color: #FAFAFA;
+	border-radius: 8px;
+	padding: 10px 20px;
+	margin-top: 10px;
+	box-shadow: 2px 2px 5px gray;
+}
+.article a{
+	font-size: 20px;
+	font-weight: bold;
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+}
+.article a:hover{
+	text-decoration: underline;
+}
+.article #date{
+	float: right;
+	color: #AAAAAA;
+}
