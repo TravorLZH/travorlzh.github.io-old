@@ -5,7 +5,11 @@ body{
 	margin: 0;
 }
 a{
+	color: blue;
 	text-decoration: none;
+}
+a:active{
+	color: red;
 }
 h1,h2,h3,h4,h5,h6 {
 	font-family: Tahoma;
@@ -111,4 +115,7 @@ h1,h2,h3,h4,h5,h6 {
 .center{
 	position: absolute;
 	left: 50%;
+}
+h2 a{
+	color: black;
 }
