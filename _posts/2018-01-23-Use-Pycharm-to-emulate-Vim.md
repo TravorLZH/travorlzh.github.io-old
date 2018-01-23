@@ -41,9 +41,11 @@ Also, Vim instroduces me Linux. It lets me be interested in Linux now. So, when 
   href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"
 />
 <!-- Prepare a container for your calendar. -->
-<div class="calendar">
-    <!-- Loading stuff -->
-    Loading the data just for you.
+<div class="calendar-frame">
+	<div class="calendar">
+		<!-- Loading stuff -->
+		Loading the data just for you.
+	</div>
 </div>
 <script>
     new GitHubCalendar(".calendar", "TravorLZH");

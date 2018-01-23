@@ -22,4 +22,8 @@
 	.content{
 		margin-top: 50px;
 	}
+	.calendar-frame{
+		overflow-x: scroll;
+		width: 100%;
+	}
 }
