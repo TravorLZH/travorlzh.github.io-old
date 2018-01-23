@@ -17,10 +17,11 @@ h1,h2,h3,h4,h5,h6 {
 	text-align: left;
 }
 .navbar{
-	z-index: 1;	!important
+	z-index: 1;
 	overflow: hidden;
 	margin: 0;
 	width: 100%;
+	box-shadow: 5px 0px 5px gray;
 	padding: 0;
 	background-color: #434647;
 }
