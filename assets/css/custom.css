@@ -37,7 +37,12 @@
 }
 
 @media only screen and (min-width: 420px){
-	.content img{
+	#post img{
 		max-width: 100%;
+	}
+	#post{
+		width: 50%;
+		margin-left: 25%;
+		margin-right: 25%;
 	}
 }

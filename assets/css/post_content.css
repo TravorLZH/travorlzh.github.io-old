@@ -52,3 +52,11 @@
   #post pre.terminal code {
     background-color: #333;
   }
+
+@media only screen and (min-width: 420px){
+	#post{
+		width: 50%;
+		left: 25%;
+		right: 25%;
+	}
+}
