@@ -1,0 +1,72 @@
+.project{
+	display: flex;
+	padding: 20px 30px;
+	position: relative;
+}
+.project a{
+	color: inherit;
+	float: right;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	font-size: 20px;
+}
+.project a::before{
+	content: "View more >";
+}
+.project h1{
+	margin: 0;
+}
+.project-txt{
+	display: inline-block;
+	float: left;
+	width: 50%;
+	margin-right: 10px;
+}
+.project-img{
+	width: 50%;
+	float: left;
+}
+.project-travoros{
+	color: white;
+	background-color: #0070FF;
+	/*height: 600px;*/
+}
+.project-reimpl-col{
+	background-color: #EEEEEE;
+}
+@media only screen and (max-width: 420px){
+	.project{
+		display: inline-block;
+	}
+	.project-txt{
+		width: 100%;
+		float: none;
+		margin-right: 0;
+	}
+	.project-img{
+		width: 100%;
+		float: none;
+	}
+	.project a{
+		margin-top: 10px;
+		position: static;
+	}
+}
+@media only screen and (min-width: 420px){
+	.p-reverse{
+		direction: rtl;
+	}
+	.p-reverse h1{
+		text-align: left;
+	}
+	.p-reverse .project-txt{
+		direction: ltr;
+		margin-left: 10px;
+		margin-right: 0px;
+	}
+	.p-reverse a{
+		right: 20px;
+	}
+}
+

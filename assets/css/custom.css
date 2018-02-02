@@ -35,7 +35,9 @@
 .content img{
 	width: 100%;
 }
-
+#post{
+	padding: 1px 20px;
+}
 @media only screen and (min-width: 420px){
 	#post img{
 		max-width: 100%;
