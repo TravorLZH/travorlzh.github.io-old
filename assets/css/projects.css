@@ -4,19 +4,11 @@
 	padding: 20px 30px;
 	position: relative;
 }
-.project #more{
-	color: inherit;
-	float: right;
-	position: absolute;
-	bottom: 20px;
-	left: 20px;
-	font-size: 20px;
-}
-.project #more::before{
-	content: "View more >";
-}
 .project h1{
 	margin: 0;
+}
+.project a{
+	color: inherit;
 }
 .project-txt{
 	display: inline-block;
@@ -56,6 +48,23 @@
 		position: static;
 	}
 }
+@media only screen and (max-width: 420px){
+	.project #more{
+		color: inherit;
+		float: right;
+		position: absolute;
+		bottom: 20px;
+		width: calc(100% - 60px);
+		text-align: center;
+		font-size: 20px;
+		animation: mov 2s linear infinite;
+	}
+	.project #more::after{
+		display: block;
+		text-align: center;
+		content: "\25BC";
+	}
+}
 @media only screen and (min-width: 420px){
 	.p-reverse{
 		direction: rtl;
@@ -70,6 +79,26 @@
 	}
 	.p-reverse a{
 		right: 20px;
+	}
+	.project #more{
+		display: none;
+	}
+}
+@keyframes mov{
+	0%{
+		transform: translate(0,0);
+	}
+	25%{
+		transform: translate(0,10px);
+	}
+	50%{
+		transform: translate(0,0);
+	}
+	75%{
+		transform: translate(0,-10px);
+	}
+	100%{
+		transform: translate(0,0);
 	}
 }
 
