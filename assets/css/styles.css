@@ -20,32 +20,52 @@ h1,h2,h3,h4,h5,h6 {
 	z-index: 1;
 	overflow: hidden;
 	margin: 0;
+	padding: 10px 0px;
 	width: 100%;
 	box-shadow: 5px 0px 5px gray;
-	padding: 0;
 	background-color: #434647;
-}
-#active{
-	background-color: green;
-	color: white;
 }
 .nav-btn{
 	float: left;
+	border-radius: 10px;
 	display: block;
 	font-size: 18px;
 	text-decoration: none;
 	height: 50px;
+	margin-left: 10px;
 	color: white;
 	padding: 14px 16px;
 	background-color: #434647;
+	transition: all 0.5s;
+}
+.nav-title{
+	display: inline-block;
+	margin: 0;
+	margin-top: 5px;
+	color: white;
+	margin-left: 20px;
+}
+.nav-title h1{
+	margin: 0;
+	display: inline-block;
 }
 .nav-menu{
 	font-size: 150%;
 	padding: 8px 12px;
 }
-.navbar a:hover:not(#active){
-	background-color: black;
+.nav-btn:hover:not(#active){
 	color: white;
+	box-shadow: inset 0px 0px 20px black;
+	transition: all 0.5s;
+}
+.navbar #active{
+	color: black;
+	background-color: white;
+	box-shadow: inset 0px 0px 20px black;
+	transition: all 0.5s;
+}
+.nav-btn:active{
+	background-color: black;
 }
 .sticky{
 	position: fixed;
@@ -120,4 +140,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 h2 a{
 	color: black;
+}
+.sticky-top{
+	position: fixed;
+	top: 0;
 }

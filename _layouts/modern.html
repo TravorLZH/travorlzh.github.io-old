@@ -4,7 +4,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8"/>
 		<title>Travor Liu - {{page.title}}</title>
-		<link rel="icon" href="../assets/icons/favicon.ico"/>
+		<link rel="icon" href="/assets/icons/favicon.ico"/>
 		<link rel="shortcut icon" href="/assets/icons/favicon.ico"/>
 		<link rel="stylesheet" href="/assets/css/styles.css"/>
 		<link rel="stylesheet" href="/assets/css/main.css"/>
@@ -26,25 +26,9 @@
 				menu.style.width="62%";
 				menu.focus();
 			}
-			var topx,x
-			window.onscroll=function(){
-				topx=document.documentElement.scrollTop;
-				x=document.getElementById("sidebar");
-				if(topx>=170){
-					x.style.top="0px";
-					//console.log("true");
-				}else{
-					x.style.top=(170-topx)+"px";
-					//console.log("false");
-				}
-			}
 		</script>
 	</head>
 	<body>
-		<div id="header" class="header hide-on-small">
-			<h1>Travor Liu</h1>
-			<p>Keep it simple and stupid</p>
-		</div>
 		<div id="sidemenu" class="hide-on-large">
 			<a href="javascript:void(0)" class="closebtn" onclick="menu_close()">&times;</a>
 			<div id="user-profile">
@@ -57,35 +41,26 @@
 				<a href="/labs.html" onclick="menu_close()">LABS</a>
 			</div>
 		</div>
-		<div id="nav" class="navbar sticky-on-small">
+		<div id="nav" class="navbar sticky-top">
+			<div class="nav-title hide-on-small">
+				<h1 class="inline-block">Travor Liu</h1>
+			</div>
 			<a class="nav-btn hide-on-large" href="javascript:void(0)" onclick="menu_open()"><i class="fa fa-bars"></i>&nbsp;Travor Liu</a>
-			<a class="nav-btn hide-on-small" href="/home.html">POSTS</a>
-			<a class="nav-btn hide-on-small" href="/projects.html">PROJECTS</a>
-			<a class="nav-btn hide-on-small" href="/labs.html">LABS</a>
+			<a class="nav-btn hide-on-large" style="float: right;" href="https://github.com/TravorLZH/travorlzh.github.io/" title="View Source"><i class="fa fa-github"></i></a>
+			<a class="nav-btn hide-on-small" style="float: right;" href="https://github.com/TravorLZH/travorlzh.github.io/" title="View Source">GITHUB</a>
+			<a class="nav-btn hide-on-small" style="float: right" href="/labs.html">LABS</a>
+			<a class="nav-btn hide-on-small" style="float: right" href="/projects.html">PROJECTS</a>
+			<a class="nav-btn hide-on-small" style="float: right" href="/home.html">POSTS</a>
 			<a class="nav-btn nav-menu hide-on-large" style="float: right;" href="/home.html"><i class="fa fa-home"></i></a>
-			<a class="nav-btn" style="float: right;" href="https://github.com/TravorLZH/travorlzh.github.io/" title="View Source"><i class="fa fa-code"></i></a>
-			<a class="nav-btn contact-twitter" style="float: right;" href="https://twitter.com/Travor_LZH" title="Twitter"><i class="fa fa-twitter"></i></a>
-			<a class="nav-btn contact-facebook" style="float: right;" href="https://www.facebook.com/travor.liu" title="Facebook"><i class="fa fa-facebook"></i></a>
 		</div>
 		<div id="main" class="t-body">
 			<div class="content">
-				<h1>{{page.mtitle}}</h1>
 				{{ content }}
-				<br/><br/><br/><hr/>
-				<span id="footer">
-					<div class="footer">
-						<p>Contact Travor &#060;<a href="mailto:travor_lzh@outlook.com">travor_lzh@outlook.com</a>&#062;</p>
-						<p><a href="https://github.com/TravorLZH">Github</a></p>
-						<p><a href="https://twitter.com/Travor_LZH">Twitter</a></p>
-						<p>Every line of code is written by me</p>
-						</ul>
-					</div>
-				</span>
 			</div>
 		</div>
 		<script>
 			var navbar=document.getElementById("nav");
-			navbar.children[{{page.nav}}+1].id="active";
+			navbar.children[6-{{page.nav}}].id="active";
 			var menu=document.getElementById("sidenav");
 			menu.children[{{page.nav}}].id="m-active";
 		</script>

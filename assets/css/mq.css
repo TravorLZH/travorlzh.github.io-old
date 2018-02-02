@@ -17,9 +17,13 @@
 		position: fixed;
 	}
 	.navbar{
-		top: 0;
+		padding: 0;
 	}
 	.content{
 		margin-top: 50px;
+	}
+	.nav-btn{
+		border-radius: 0;
+		margin-left: 0;
 	}
 }
