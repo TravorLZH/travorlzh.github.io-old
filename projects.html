@@ -10,9 +10,9 @@ nav: 1
 		<p>A simple OS running on i386 architecture</p>
 	</div>
 	<div class="project-img">
-		<img src="/assets/images/travoros.png"/>
+		<img src="/assets/images/travoros2.png"/>
 	</div>
-	<a href="https://github.com/TravorLZH/TravorOS"></a>
+	<a id="more" href="https://github.com/TravorLZH/TravorOS"></a>
 </div>
 <div class="project p-reverse project-reimpl-col">
 	<div class="project-txt">
@@ -28,5 +28,16 @@ nav: 1
 	<div class="project-img">
 		<img src="/assets/images/reimpl-col.png" alt="Reimplementation of printf"/>
 	</div>
-	<a href="https://github.com/TravorLZH/reimplementation-collection"></a>
+	<a id="more" href="https://github.com/TravorLZH/reimplementation-collection"></a>
 </div>
+<script type="text/javascript">
+if(screen.width<420){
+	// TODO: Scripts for mobile devices
+	console.log("You're using phone, aren't you?");
+	var elmnts=document.querySelectorAll(".project");
+	var x=elmnts.length;
+	for(i=0;i<x;i++){
+		elmnts[i].style["min-height"]=document.documentElement.clientHeight-40+"px";
+	}
+}
+</script>

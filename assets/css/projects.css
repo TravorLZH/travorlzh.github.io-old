@@ -1,9 +1,10 @@
 .project{
+	width: 100%;
 	display: flex;
 	padding: 20px 30px;
 	position: relative;
 }
-.project a{
+.project #more{
 	color: inherit;
 	float: right;
 	position: absolute;
@@ -11,7 +12,7 @@
 	left: 20px;
 	font-size: 20px;
 }
-.project a::before{
+.project #more::before{
 	content: "View more >";
 }
 .project h1{
@@ -29,7 +30,7 @@
 }
 .project-travoros{
 	color: white;
-	background-color: #0070FF;
+	background: #0070FF url("/assets/images/travorosbg.png") 0px 0px/30% no-repeat;
 	/*height: 600px;*/
 }
 .project-reimpl-col{
@@ -38,6 +39,8 @@
 @media only screen and (max-width: 420px){
 	.project{
 		display: inline-block;
+		background-position: 0px 100px;
+		background-size: 100%;
 	}
 	.project-txt{
 		width: 100%;
@@ -48,7 +51,7 @@
 		width: 100%;
 		float: none;
 	}
-	.project a{
+	.project #more{
 		margin-top: 10px;
 		position: static;
 	}
