@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>MathJax Editor</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+		<script type="text/javascript">
+			function updateMathJax(){
+				var output=document.getElementById("out");
+				var code=document.getElementById("code").value;
+				output.style="display: none";
+				if(code==""){
+					return;
+				}
+				output.innerText="$$\\displaystyle{"+code+"}$$";
+				MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+				output.style="display: inline-block";
+			}
+		</script>
+	</head>
+	<style type="text/css">
+		#out {
+			display: none;
+			padding: 10px 30px 10px 30px;
+			border: 3px solid black;
+		}
+		#code {
+			border: 5px solid #D0D0D0;
+			font-size: 20px;
+			font-family: monospace;
+		}
+		#code:focus {
+			border: 5px solid #B0B0B0;
+			outline: none;
+		}
+	</style>
+	<body>
+		<h1>MathJax Editor</h1>
+		<hr/>
+		<p>Enter your MathJax here:</p>
+		<textarea id="code" placeholder="MathJax code..." onkeyup="updateMathJax()"></textarea>
+		<p>And see the output below:</p>
+		<div id="out">
+		</div>
+	</body>
+</html>
